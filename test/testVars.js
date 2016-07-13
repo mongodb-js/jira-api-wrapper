@@ -1,6 +1,6 @@
 require('dotenv').config();
 
-var URL = 'https://jira.mongodb.org/rest/api/2';
+var URL = process.env.JIRA_URL;
 var auth = {
   user: process.env.JIRA_USER,
   pass: process.env.JIRA_PASS

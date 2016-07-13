@@ -1,6 +1,6 @@
 {
-  "name": "jira-api-wrapper",
-  "description": "Light wrapper to access JIRA API and abstract out api-specific methods",
+  "name": "jira-issue-read-stream",
+  "description": "Light wrapper to access JIRA's API and abstract out api-specific methods",
   "version": "0.0.0",
   "scripts": {
     "fmt": "mongodb-js-fmt",

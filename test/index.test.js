@@ -1,6 +1,6 @@
 /* eslint no-unused-expressions:0 */
 
-var jiraApiWrapper = require('../lib/index.js');
+var getJiraIssuesJQL = require('../lib/index.js');
 var request = require('request');
 var expect = require('chai').expect;
 var sinon = require('sinon');
@@ -20,11 +20,11 @@ describe('jira api wrapper testing', function() {
   });
 
   it('api should exist', function() {
-    expect(jiraApiWrapper).to.exist;
+    expect(getJiraIssuesJQL).to.exist;
   });
 
   it('getIssuesJQL with no jql should return error', function(done) {
-    jiraApiWrapper.getIssuesJQL(null, function(err, res) {
+    getJiraIssuesJQL(null, function(err, res) {
       expect(err).to.equal('NO JQL PROVIDED');
       expect(res).to.be.undefined;
       done();
@@ -32,7 +32,7 @@ describe('jira api wrapper testing', function() {
   });
 
   it('getIssuesJQL with jql should return a stream', function(done) {
-    jiraApiWrapper.getIssuesJQL('', function(err, res) {
+    getJiraIssuesJQL('', function(err, res) {
       if (err) return done(err);
       expect(res).to.be.an('object');
       expect(res.__HighlandStream__).to.be.true;
