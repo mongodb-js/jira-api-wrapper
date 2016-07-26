@@ -1,5 +1,5 @@
 {
-  "name": "jira-issue-read-stream",
+  "name": "mongodb-js-jira",
   "description": "Light wrapper to access JIRA's API and abstract out api-specific methods",
   "version": "0.1.0",
   "scripts": {

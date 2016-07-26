@@ -2,9 +2,20 @@
 
 > Light wrapper to access JIRA API and abstract out api-specific methods
 
+## Install
+
+```
+npm install mongodb-js-jira
+```
+
 ## Example
 
 ```javascript
+var jira = require('mongodb-js-jira');
+
+// Function to search JIRA for issues that match the provided JQL and writes results to a stream
+// @return callback(err) if an error occurs or callback(null, stream) if successful
+jira.getJiraIssuesJQL(<jql>, callback);
 ```
 
 ## License
